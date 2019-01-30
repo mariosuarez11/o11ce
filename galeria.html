@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="11style.css">
+	<title>Service 11</title>
+	<script scr="jquery.js"></script>
+</head>
+<body>
+ 	<div class="photoss">
+		<ul>
+			<li><img src="img/gal1.jpg"></li>
+			<li><img src="img/gal2.jpg"></li>
+		</ul>
+	</div>
+	<div class="textslider">
+		<ul>
+			<li class="edit">Te</li>
+			<li class="edit">Amo</li>
+			<li class="edit">Mucho</li>
+			<li class="edit">Mi</li>
+			<li class="edit">Amor</li>
+		</ul>
+	</div>
+	<hr />
+	<br>
+	<center>
+	<h1 id="multimedia" class="titulo"></h1>
+
+
+<script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyA9y0zmSDEHC-2sqDP9iAE88Em5rP50204",
+    authDomain: "multimedia-c2dc8.firebaseapp.com",
+    databaseURL: "https://multimedia-c2dc8.firebaseio.com",
+    projectId: "multimedia-c2dc8",
+    storageBucket: "multimedia-c2dc8.appspot.com",
+    messagingSenderId: "198818014963"
+  };
+  firebase.initializeApp(config);
+   			 var multimedia = document.getElementById('multimedia');
+ 			 var dbRef = firebase.database().ref().child('text');
+ 			 dbRef.on('value', snap => multimedia.innerText = snap.val() );
+</script>
+
+			<a href="11.html" id="inicio" class="menu radio"></a>
+			<a href="galeria.html" id="fotos" class="menu radio"></a>
+			<a href="#" id="dia" class="menu radio"></a>
+		</center>
+		<div class="btnInicio">
+
+	<script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+		<script>
+  // Initialize Firebase
+ 			 var config = {
+   			 apiKey: "AIzaSyBbdDz6nooPKRNMK9-T0S9p2CVSp9on4v8",
+    		 authDomain: "inicio-dcb75.firebaseapp.com",
+   		 	 databaseURL: "https://inicio-dcb75.firebaseio.com",
+   			 projectId: "inicio-dcb75",
+   			 storageBucket: "",
+   			 messagingSenderId: "479132911391"};
+ 			 firebase.initializeApp(config);
+
+ 			 var inicio = document.getElementById('inicio');
+ 			 var dbRef = firebase.database().ref().child('text');
+ 			 dbRef.on('value', snap => inicio.innerText = snap.val() );
+		</script>
+
+</div>
+<div class="btnGaleria">
+
+	<script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+		<script>
+  // Initialize Firebase
+ 			 var config = {
+  			  apiKey: "AIzaSyDMhnD0Azlh3WBby87E19e6eB1FciVKTVc",
+  			  authDomain: "galeria-6a8f5.firebaseapp.com",
+  			  databaseURL: "https://galeria-6a8f5.firebaseio.com",
+  			  projectId: "galeria-6a8f5",
+   			 storageBucket: "",
+   			 messagingSenderId: "554835934669"};
+  			firebase.initializeApp(config);
+
+  		var fotos = document.getElementById('fotos');
+  		var dbRef = firebase.database().ref().child('text');
+  		dbRef.on('value', snap => fotos.innerText = snap.val () );
+	</script>
+</div>
+<div class="btnDia11">
+
+	<script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+		<script>
+  // Initialize Firebase
+ 			 var config = {
+  			  apiKey: "AIzaSyD6wBdliq_3_6HqynvCE9rLRFOVulDxqgA",
+  			  authDomain: "diaonce-8658e.firebaseapp.com",
+  			  databaseURL: "https://diaonce-8658e.firebaseio.com",
+  			  projectId: "diaonce-8658e",
+  			  storageBucket: "",
+  			  messagingSenderId: "838818705295" };
+ 			  firebase.initializeApp(config);
+
+ 			  var dia = document.getElementById('dia');
+ 			 var dbRef = firebase.database().ref().child('text');
+ 			 dbRef.on('value', snap => dia.innerText = snap.val() );
+		</script>
+</div>
+</center>
+<br><br>
+<div class="nota">
+	<center>
+	<p>
+		si vas a poner los botones de música solo pon uno a la vez, ya que olvide solucionar el error de reproducción
+	</p>
+	</center>
+</div>
+<hr />
+
+</body>
+</html>

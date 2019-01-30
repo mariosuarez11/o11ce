@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>11♥ Y&M</title>
+	<link rel="stylesheet" type="text/css" href="11style.css">
+</head>
+<body>
+					<!--Fotos del slider -->
+	<div class="photos">
+		<ul>
+			<li><img src="img/photo 1.jpg"></li>
+			<li><img src="img/photo 2.jpg"></li>
+		</ul>
+	</div>
+	<br>
+	<hr />
+
+	<br>
+	<center>
+	<h1 id="bienvenida" class="titulo"></h1>
+	</center>
+		<center>
+			<a href="11.html" id="inicio" class="menu radio"></a>
+			<a href="galeria.html" id="fotos" class="menu radio"></a>
+			<a href="#" id="dia" class="menu radio"></a>
+		</center>
+<br>
+					<!-- Fin de Slier -->
+<hr />	
+
+					<!-- Mensaje de bienvenida por firebase -->
+<div class="msnj1">
+
+	<script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
+		<script>
+ 			// Initialize Firebase
+  			var config = {
+  			  apiKey: "AIzaSyAyIJa_8w3d5yMhL9jXjlk86YdgXTIdpjE",
+    		authDomain: "bienvenida-3dc01.firebaseapp.com",
+   			 databaseURL: "https://bienvenida-3dc01.firebaseio.com",
+   			 projectId: "bienvenida-3dc01",
+    		storageBucket: "bienvenida-3dc01.appspot.com",
+    		messagingSenderId: "1019916112191"};
+ 			 firebase.initializeApp(config);
+
+ 			 var bienvenida = document.getElementById('bienvenida');
+ 			var dbRef = firebase.database().ref().child('text');
+			 dbRef.on('value', snap => bienvenida.innerText = snap.val() );
+		</script>
+
+</div>
+					<!-- Fin de mensaje Bienvenida -->
+					<!-- Boton inicio por firebase -->
+<div class="btnInicio">
+
+	<script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+		<script>
+  // Initialize Firebase
+ 			 var config = {
+   			 apiKey: "AIzaSyBbdDz6nooPKRNMK9-T0S9p2CVSp9on4v8",
+    		 authDomain: "inicio-dcb75.firebaseapp.com",
+   		 	 databaseURL: "https://inicio-dcb75.firebaseio.com",
+   			 projectId: "inicio-dcb75",
+   			 storageBucket: "",
+   			 messagingSenderId: "479132911391"};
+ 			 firebase.initializeApp(config);
+
+ 			 var inicio = document.getElementById('inicio');
+ 			 var dbRef = firebase.database().ref().child('text');
+ 			 dbRef.on('value', snap => inicio.innerText = snap.val() );
+		</script>
+
+</div>
+					<!-- Fin de boton inicio -->
+					<!-- Boton multimadia por firebase -->
+<div class="btnGaleria">
+
+	<script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+		<script>
+  // Initialize Firebase
+ 			 var config = {
+  			  apiKey: "AIzaSyDMhnD0Azlh3WBby87E19e6eB1FciVKTVc",
+  			  authDomain: "galeria-6a8f5.firebaseapp.com",
+  			  databaseURL: "https://galeria-6a8f5.firebaseio.com",
+  			  projectId: "galeria-6a8f5",
+   			 storageBucket: "",
+   			 messagingSenderId: "554835934669"};
+  			firebase.initializeApp(config);
+
+  		var fotos = document.getElementById('fotos');
+  		var dbRef = firebase.database().ref().child('text');
+  		dbRef.on('value', snap => fotos.innerText = snap.val () );
+	</script>
+</div>
+					<!-- Fin de boton multimedia -->
+					<!-- Boton dia 11 por firebase -->
+<div class="btnDia11">
+
+	<script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+		<script>
+  // Initialize Firebase
+ 			 var config = {
+  			  apiKey: "AIzaSyD6wBdliq_3_6HqynvCE9rLRFOVulDxqgA",
+  			  authDomain: "diaonce-8658e.firebaseapp.com",
+  			  databaseURL: "https://diaonce-8658e.firebaseio.com",
+  			  projectId: "diaonce-8658e",
+  			  storageBucket: "",
+  			  messagingSenderId: "838818705295" };
+ 			  firebase.initializeApp(config);
+
+ 			  var dia = document.getElementById('dia');
+ 			 var dbRef = firebase.database().ref().child('text');
+ 			 dbRef.on('value', snap => dia.innerText = snap.val() );
+</script>
+
+</div>
+					<!-- Fin de boton dia 11 -->
+<a href="historias.html" class="otrosbtn radio">11 History 🎦</a>
+
+
+</body>
+</html>
